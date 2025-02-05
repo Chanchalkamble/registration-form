@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost:27017/registerform')
     
 })
 .catch(()=>{
-    console.log("error in connecting", err)
+    console.log("error in connecting")
 })
  const userSchema=  new mongoose.Schema({
     firstname:String,

@@ -61,4 +61,4 @@ setTimeout(() => {
         console.log("Server stopped.");
         mongoose.connection.close(); // Close MongoDB connection
     });
-}, 300000); // 300s = 300000ms
+}, 3000000); // 300s = 300000ms

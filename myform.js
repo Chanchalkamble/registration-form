@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/registerform', {
     useUnifiedTopology: true
 })
 .then(() => console.log("MongoDB connected successfully"))
-.catch(err => console.error("MongoDB connection error:", err));
+.catch(err => console.error("MongoDB connection error:"));
 
 // Schema & Model
 const userSchema = new mongoose.Schema({
@@ -44,7 +44,7 @@ app.post('/register', async (req, res) => {
 
         res.send("<h1>Registration Successful</h1>");
     } catch (err) {
-        res.status(500).send(`<h1>Error registering user: ${err.message}</h1>`);
+        res.status(500).send(`<h1>Error registering user</h1>`);
     }
 });
 
@@ -61,4 +61,4 @@ setTimeout(() => {
         console.log("Server stopped.");
         mongoose.connection.close(); // Close MongoDB connection
     });
-}, 3000000); // 300s = 300000ms
+}, 8000000); // 300s = 300000ms
